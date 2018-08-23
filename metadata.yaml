@@ -1,0 +1,13 @@
+
+---
+# Titolo della tesi, sarà inserito nel frontespizio ed in cima ad ogni pagina
+title: "Titolo di esempio"
+# La tua Matricola, sarà inserita in basso nel frontespizio
+mat: "0000000"
+# Anno accademico di tesi
+aa: "2xxx/2xxx"
+# Il tuo nome e cognome, saranno inseriti in basso nel frontespizio
+ns: "Arnaldo Angurioni"
+# Docente Relatore
+rel: "Pietro Smusi"
+---

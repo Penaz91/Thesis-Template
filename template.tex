@@ -1,7 +1,10 @@
 %\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 \documentclass{article}
 \usepackage{float}
+\usepackage{datetime}
 \usepackage[italian]{babel}
+\usepackage{textcomp}
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
 $if(beamerarticle)$
 \usepackage{beamerarticle} % needs to be loaded first
 $endif$
@@ -244,11 +247,32 @@ $endif$
         \vfill
         \Huge{$title$}\\
         \vfill
-        \normalsize $namesurname$\\
-        Mat: $mat$
+        \normalsize
+        \begin{flushleft}
+            \textit{Relatore}\\
+            $rel$
+        \end{flushleft}
+        \begin{flushright}
+            \textit{Laureando}\\
+            $ns$\\
+            Mat: $mat$
+        \end{flushright}
+        \vfill
+        \noindent\makebox[\linewidth]{\rule{.8\paperwidth}{0.4pt}}\\
+        \textsc{Anno Accademico $aa$}
     \end{center}
 \end{titlepage}
 
+% Copyright page
+\clearpage
+\null
+\vfill
+\begin{minipage}[b]{\textwidth}
+\begin{center}
+$ns$: \textit{$title$}, Tesi di laurea triennale, \textcopyright\ \monthyeardate{\today}.
+\end{center}
+\end{minipage}
+\clearpage
 \pagestyle{fancy}
 \normalsize
 $if(abstract)$
