@@ -2,6 +2,7 @@
 \documentclass{article}
 \usepackage{float}
 \usepackage{epigraph}
+\setlength\epigraphwidth{.8\textwidth}
 \usepackage{datetime}
 \usepackage{enumitem}
 \usepackage[italian]{babel}
@@ -286,7 +287,6 @@ $if(initquote)$
 \epigraph{$initquote$}{\textit{$initquoteauthor$}}
 $endif$
 \addvspace{$vspace$ pt}
-Dedicato a:\\
 \begin{itemize}[label={}]
     $for(dedication)$
         \item $dedication$

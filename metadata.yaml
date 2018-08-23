@@ -1,7 +1,7 @@
 
 ---
 # Titolo della tesi, sarà inserito nel frontespizio ed in cima ad ogni pagina
-title: "Titolo di esempio"
+title: "Titolo di prova"
 # La tua Matricola, sarà inserita in basso nel frontespizio
 mat: "0000000"
 # Anno accademico di tesi
@@ -13,12 +13,12 @@ rel: "Pietro Smusi"
 # Frase ispiratoria iniziale
 initquote: "Lorem Ipsum"
 # Autore di tale frase
-initquoteauthor: "A random web dev"
+initquoteauthor: "Some Web Developer"
 # Dediche
 dedication:
-    - One
-    - Two
-    - Three
+    - A me
+    - A me
+    - Ancora a me
 # Spazio tra quote e dediche (in punti)
 vspace: 200
 # Indice?
@@ -27,4 +27,8 @@ toc: True
 lof: True
 # Lista delle tabelle?
 lot: True
+# Geometria
+geometry:
+    - "lmargin=2.5cm"
+    - "rmargin=2.5cm"
 ---
