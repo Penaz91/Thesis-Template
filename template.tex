@@ -3,6 +3,7 @@
 \usepackage{float}
 \usepackage{epigraph}
 \usepackage{datetime}
+\usepackage{enumitem}
 \usepackage[italian]{babel}
 \usepackage{textcomp}
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
@@ -275,6 +276,7 @@ $ns$: \textit{$title$}, Tesi di laurea triennale, \textcopyright\ \monthyeardate
 \end{minipage}
 \clearpage
 
+\pagenumbering{Roman}
 % Dedication Page
 \clearpage
 \null
@@ -285,14 +287,14 @@ $if(initquote)$
 $endif$
 \addvspace{$vspace$ pt}
 Dedicato a:\\
-\begin{itemize}
+\begin{itemize}[label={}]
     $for(dedication)$
         \item $dedication$
     $endfor$
 \end{itemize}
 \end{minipage}
 \vfill
-\clearpage
+\cleardoublepage
 \pagestyle{fancy}
 \normalsize
 $if(abstract)$
@@ -320,6 +322,8 @@ $endif$
 $if(lof)$
 \listoffigures
 $endif$
+\clearpage
+\pagenumbering{arabic}
 $body$
 
 $if(natbib)$

@@ -21,4 +21,10 @@ dedication:
     - Three
 # Spazio tra quote e dediche (in punti)
 vspace: 200
+# Indice?
+toc: True
+# Lista delle figure?
+lof: True
+# Lista delle tabelle?
+lot: True
 ---

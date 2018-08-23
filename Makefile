@@ -1,5 +1,5 @@
 pdf:
-	pandoc content/*.md metadata.yaml --template template.tex --toc -s -o Thesis.pdf
+	pandoc content/*.md metadata.yaml --template template.tex -s -o Thesis.pdf
 
 clean:
 	rm -f *.pdf
