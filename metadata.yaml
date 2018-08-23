@@ -10,4 +10,15 @@ aa: "2xxx/2xxx"
 ns: "Arnaldo Angurioni"
 # Docente Relatore
 rel: "Pietro Smusi"
+# Frase ispiratoria iniziale
+initquote: "Lorem Ipsum"
+# Autore di tale frase
+initquoteauthor: "A random web dev"
+# Dediche
+dedication:
+    - One
+    - Two
+    - Three
+# Spazio tra quote e dediche (in punti)
+vspace: 200
 ---

@@ -1,6 +1,7 @@
 %\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 \documentclass{article}
 \usepackage{float}
+\usepackage{epigraph}
 \usepackage{datetime}
 \usepackage[italian]{babel}
 \usepackage{textcomp}
@@ -272,6 +273,25 @@ $endif$
 $ns$: \textit{$title$}, Tesi di laurea triennale, \textcopyright\ \monthyeardate{\today}.
 \end{center}
 \end{minipage}
+\clearpage
+
+% Dedication Page
+\clearpage
+\null
+\vfill
+\begin{minipage}[b]{\textwidth}
+$if(initquote)$
+\epigraph{$initquote$}{\textit{$initquoteauthor$}}
+$endif$
+\addvspace{$vspace$ pt}
+Dedicato a:\\
+\begin{itemize}
+    $for(dedication)$
+        \item $dedication$
+    $endfor$
+\end{itemize}
+\end{minipage}
+\vfill
 \clearpage
 \pagestyle{fancy}
 \normalsize
