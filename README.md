@@ -18,7 +18,7 @@ Per configurare i parametri di base per la compilazione è sufficiente modificar
 FAQ
 ------
 
-**Q: Non riesco a fare <qualcosa> con questo markdown!**
+**Q: Non riesco a fare [qualcosa] con questo template markdown!**
 
 A: Fallo in LaTeX! Se inserisci del codice LaTeX all'interno del documento, questo sarà automaticamente passato, inalterato, a pdflatex che si occuperà del rendering
 
