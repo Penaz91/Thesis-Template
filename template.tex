@@ -2,12 +2,16 @@
 \documentclass{article}
 \usepackage{float}
 \usepackage{epigraph}
+\usepackage{makecell}
 \setlength\epigraphwidth{.8\textwidth}
 \usepackage{datetime}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \usepackage[italian]{babel}
 \usepackage{textcomp}
-\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+\usepackage{fixltx2e}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\newcommand{\ttabitem}{~~~~\llap{$$\circ$$}~~}
 $if(beamerarticle)$
 \usepackage{beamerarticle} % needs to be loaded first
 $endif$
@@ -248,7 +252,7 @@ $endif$
         \includegraphics[width=.4\linewidth]{images/unipd.pdf}\\
         \Large{\textsc{Dipartimento di Matematica "Tullio Levi-Civita"}}\\
         \noindent\makebox[\linewidth]{\rule{.8\paperwidth}{0.4pt}}\\
-        \large{\textsc{Corso di Informatica}}
+        \large{\textsc{Corso di Laurea in Informatica}}
         \vfill
         \Huge{$title$}\\
         \vfill
@@ -274,7 +278,7 @@ $endif$
 \vfill
 \begin{minipage}[b]{\textwidth}
 \begin{center}
-$ns$: \textit{$title$}, Tesi di laurea triennale, \textcopyright\ \monthyeardate{\today}.
+    $ns$: \textit{$title$}, Tesi di laurea triennale, \textcopyright\ $monthyeardate$.
 \end{center}
 \end{minipage}
 \clearpage
@@ -314,8 +318,12 @@ $if(colorlinks)$
 \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
 $endif$
 \setcounter{tocdepth}{$toc-depth$}
+\clearpage
+\pagestyle{empty}
+\null\clearpage
+\pagestyle{fancy}
 \tableofcontents
-\pagebreak
+\clearpage
 }
 $endif$
 $if(lot)$
